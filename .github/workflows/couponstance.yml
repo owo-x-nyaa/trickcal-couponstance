@@ -36,4 +36,5 @@ jobs:
         env:
           UID: ${{ secrets.UID }}
         run: |
+          echo "UID = $UID"  # 값 확인용
           python couponstance.py
