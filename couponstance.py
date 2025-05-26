@@ -80,6 +80,7 @@ async def couponstance():
         await page.fill('#UserId', os.getenv("TRICKAL_UID"))
         await page.fill('#CouponCode', coupon_code)
         await page.click('button[onclick="CouponSubmit()"]')
+        await page.wait_for_timeout(500)
         await browser.close()
 
 asyncio.run(couponstance())
