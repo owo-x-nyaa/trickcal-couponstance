@@ -77,7 +77,7 @@ async def couponstance():
 
         # IOS 쿠폰 입력
         await page.goto(IOS_COUPON_URL, wait_until='load')
-        await page.fill('#UserId', os.getenv("UID"))
+        await page.fill('#UserId', os.environ.get("UID"))
         await page.fill('#CouponCode', coupon_code)
         await page.click('button[onclick="CouponSubmit()"]')
         await browser.close()
