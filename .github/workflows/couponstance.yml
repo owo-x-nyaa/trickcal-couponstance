@@ -34,7 +34,6 @@ jobs:
 
       - name: Run couponstance
         env:
-          UID: ${{ secrets.UID }}
+          TRICKAL_UID: ${{ secrets.TRICKAL_UID }}
         run: |
-          echo "UID = $UID"  # 값 확인용
           python couponstance.py
